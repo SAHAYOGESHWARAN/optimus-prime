@@ -1,6 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif; /* Use a more modern font */
-    background-color: #f5f5f5; /* Light background for contrast */
+    background-color: #181818; /* Dark background for a futuristic feel */
+    color: #fff; /* White text for better contrast */
+    overflow: hidden; /* Hide scrollbars for a more immersive experience */
 }
 
 .container-fluid {
@@ -13,11 +15,11 @@ body {
 
 .col-md-3,
 .col-md-6 {
-    background-color: #fff; /* White background for content areas */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
     padding: 20px;
-    border: 1px solid #ddd; /* Light border */
+    border: 1px solid #444; /* Dark gray border */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 /* Heading styles */
@@ -25,12 +27,13 @@ h2 {
     color: #007bff; /* Optimus blue for headings */
     font-weight: bold; /* Bold for emphasis */
     text-transform: uppercase; /* Uppercase for a tech feel */
+    text-shadow: 0 0 5px #000; /* Add a subtle text shadow */
 }
 
 /* Chatbot styles */
 #chatbot {
-    background-color: #e9ecef; /* Light gray background */
-    border: 1px solid #ced4da; /* Border for chatbot area */
+    background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
+    border: 1px solid #444; /* Dark gray border */
     border-radius: 10px; /* Rounded corners */
     padding: 15px; /* Padding inside chatbot area */
 }
@@ -52,7 +55,7 @@ h2 {
 }
 
 .border {
-    border: 1px solid #ced4da; /* Border for the chatbot area */
+     border: 1px solid #444; /* Dark gray border */
 }
 
 .rounded {
@@ -64,10 +67,16 @@ h2 {
     background-color: #007bff; /* Optimus blue for buttons */
     color: white;
     border-radius: 50px; /* Rounded button shape */
+    border: none; /* No border for a cleaner look */
+    padding: 10px 20px; /* Add some padding for a better feel */
+    font-size: 16px; /* Increase font size for better readability */
+    cursor: pointer; /* Add a pointer cursor for a more interactive feel */
 }
 
 .btn-robot:hover {
     background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.2s; /* Smooth transition */
 }
 
 /* Card styles for robotic interface */
@@ -75,6 +84,7 @@ h2 {
     border: none; /* No border for a cleaner look */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
 }
 
 /* Custom styles for circular display */
@@ -88,6 +98,7 @@ h2 {
     align-items: center;
     justify-content: center;
     margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
 /* Hover effect for the main display */
