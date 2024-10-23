@@ -1,141 +1,188 @@
+/* Basic Styling */
 body {
-    font-family: 'Roboto', sans-serif; /* Use a more modern font */
+    font-family: 'Roboto', sans-serif; /* Modern font */
     background-color: #181818; /* Dark background for a futuristic feel */
-    color: #fff; /* White text for better contrast */
-    overflow: hidden; /* Hide scrollbars for a more immersive experience */
+    color: #00b3e0; /* Cyan color */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Make the body take up the full viewport height */
-  }
-  
-  .container-fluid {
-    padding: 20px;
-    background-color: #181818; /* Dark background for a futuristic feel */
-  }
-  
-  .row {
-    margin-top: 20px;
-  }
-  
-  .col-md-3,
-  .col-md-6 {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
-    padding: 20px;
-    border: 1px solid #444; /* Dark gray border */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker navbar */
+    border-bottom: 1px solid #00b3e0; /* Cyan border at the bottom */
+}
+
+.navbar-brand, .nav-link {
+    color: #00b3e0; /* Cyan color for navbar items */
+}
+
+.navbar-toggler-icon {
+    background-color: #00b3e0; /* Cyan color for toggle button */
+}
+
+/* Container */
+.container-fluid {
+    padding-bottom: 50px; /* Add padding to the bottom of the container */
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    border: 1px solid #00b3e0; /* Cyan border */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-  }
-  
-  /* Heading styles */
-  h2 {
-    color: #007bff; /* Optimus blue for headings */
-    font-weight: bold; /* Bold for emphasis */
-    text-transform: uppercase; /* Uppercase for a tech feel */
-    text-shadow: 0 0 5px #000; /* Add a subtle text shadow */
-  }
-  
-  /* Chatbot styles */
-  #chatbot {
-    background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
-    border: 1px solid #444; /* Dark gray border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Padding inside chatbot area */
-  }
-  
-  /* Alert styles */
-  .list-group-item-danger {
-    background-color: #dc3545; /* Red for danger alerts */
-     color: white;
-  }
-  
-  .list-group-item-warning {
-    background-color: #ffc107; /* Yellow for warning alerts */
-    color: black;
-  }
-  
-  /* Additional styling for interactive elements */
-  .text-center {
-    margin-top: 20px;
-  }
-  
-  .border {
-    border: 1px solid #444; /* Dark gray border */
-  }
-  
-  .rounded {
-    border-radius: 0.25rem; /* Rounded corners */
-  }
-  
-  /* Button styles */
-  .btn-robot {
-    background-color: #007bff; /* Optimus blue for buttons */
-    color: white;
-    border-radius: 50px; /* Rounded button shape */
-    border: none; /* No border for a cleaner look */
-    padding: 10px 20px; /* Add some padding for a better feel */
-    font-size: 16px; /* Increase font size for better readability */
-    cursor: pointer; /* Add a pointer cursor for a more interactive feel */
-  }
-  
-  .btn-robot:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    transition: transform 0.2s; /* Smooth transition */
-  }
-  
-  /* Card styles for robotic interface */
-  .card {
-    border: none; /* No border for a cleaner look */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
-  }
-  
-  /* Custom styles for circular display */
-  .circular-display {
+    box-shadow: 0 0 20px rgba(0, 179, 224, 0.5); /* Shadow effect */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+/* Card Header */
+.card-header {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #00b3e0; /* Cyan color for header */
+    text-align: center;
+    padding: 15px; /* Padding for header */
+}
+
+/* Card Body */
+.card-body {
+    padding: 20px; /* Padding for body */
+}
+
+/* Heading Styles */
+h2, h4 {
+    color: #00b3e0; /* Cyan color for headings */
+    text-shadow: 0 0 5px rgba(0, 179, 224, 0.5); /* Subtle glow effect */
+}
+
+/* Circular Display */
+.circular-display {
+    position: relative;
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Circular shape */
-    background: linear-gradient(180deg, #007bff, #0056b3); /* Gradient effect */
-    color: white;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 2px solid #00b3e0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 179, 224, 0.3), rgba(0, 0, 0, 0.8));
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-  }
-  
-  /* Hover effect for the main display */
-  .circular-display:hover {
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 179, 224, 0.5); /* Shadow effect */
+    animation: pulse 3s infinite alternate; /* Animation */
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 179, 224, 0.5);
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(0, 179, 224, 0.7);
+        transform: scale(1.05);
+    }
+}
+
+/* Main Display */
+#main-display {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 4px solid #00b3e0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 179, 224, 0.3), rgba(0, 0, 0, 0.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 179, 224, 0.5); /* Shadow effect */
+    animation: pulse 3s infinite alternate; /* Animation */
+}
+
+/* Display Text */
+#laichzeit {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#rammstein {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Chatbot Styles */
+#chatbot {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border: 1px solid #00b3e0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 179, 224, 0.5); /* Shadow effect */
+}
+
+/* User Input Styles */
+#user-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    transition: border 0.3s; /* Animation for input border */
+}
+
+#user-input:focus {
+    outline: none; /* Remove default focus outline */
+    border: 2px solid #00b3e0; /* Cyan border on focus */
+}
+
+/* Send Button Styles */
+#send-button {
+    background-color: #00b3e0;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+#send-button:hover {
+    background-color: #0056b3;
     transform: scale(1.05); /* Slightly enlarge on hover */
-    transition: transform 0.2s; /* Smooth transition */
-  }
-  
-  /* Jarvis AI styles */
-  .jarvis-ai {
-    background-color: #181818; /* Dark background for a futuristic feel */
-    padding: 20px;
+}
+
+/* Alert Styles */
+.list-group-item-danger {
+    background-color: #dc3545; /* Red for danger alerts */
+    color: #fff; /* White text for better contrast */
+}
+
+.list-group-item-warning {
+    background-color: #ffc107; /* Yellow for warning alerts */
+    color: #000; /* Black text for better contrast */
+}
+
+/* Additional Styles */
+.text-center {
+    text-align: center; /* Center text */
+}
+
+.border {
     border: 1px solid #444; /* Dark gray border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-  }
-  
-  .jarvis-ai .jarvis-header {
-    background-color: #007bff; /* Optimus blue for headings */
-    padding: 10px;
-    border-bottom: 1px solid #444; /* Dark gray border */
-    border-radius: 10px 10px 0 0; /* Rounded corners */
-  }
-  
-  .jarvis-ai .jarvis-body {
-    padding: 20px;
-  }
-  
-  .jarvis-ai .jarvis-footer {
-    background-color: #007bff; /* Optimus blue for headings */
-    padding: 10px;
-    border-top: 1px solid #444; /* Dark gray border */
-    border-radius: 0 0 10px 10px; /* Rounded corners */
-  }
+}
+
+.rounded {
+    border-radius: 0.25rem; /* Rounded corners */
+}
