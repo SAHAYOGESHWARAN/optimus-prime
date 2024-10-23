@@ -3,67 +3,73 @@ body {
     background-color: #181818; /* Dark background for a futuristic feel */
     color: #fff; /* White text for better contrast */
     overflow: hidden; /* Hide scrollbars for a more immersive experience */
-}
-
-.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Make the body take up the full viewport height */
+  }
+  
+  .container-fluid {
     padding: 20px;
-}
-
-.row {
+    background-color: #181818; /* Dark background for a futuristic feel */
+  }
+  
+  .row {
     margin-top: 20px;
-}
-
-.col-md-3,
-.col-md-6 {
+  }
+  
+  .col-md-3,
+  .col-md-6 {
     background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
     padding: 20px;
     border: 1px solid #444; /* Dark gray border */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-}
-
-/* Heading styles */
-h2 {
+  }
+  
+  /* Heading styles */
+  h2 {
     color: #007bff; /* Optimus blue for headings */
     font-weight: bold; /* Bold for emphasis */
     text-transform: uppercase; /* Uppercase for a tech feel */
     text-shadow: 0 0 5px #000; /* Add a subtle text shadow */
-}
-
-/* Chatbot styles */
-#chatbot {
+  }
+  
+  /* Chatbot styles */
+  #chatbot {
     background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
     border: 1px solid #444; /* Dark gray border */
     border-radius: 10px; /* Rounded corners */
     padding: 15px; /* Padding inside chatbot area */
-}
-
-/* Alert styles */
-.list-group-item-danger {
+  }
+  
+  /* Alert styles */
+  .list-group-item-danger {
     background-color: #dc3545; /* Red for danger alerts */
-    color: white;
-}
-
-.list-group-item-warning {
+     color: white;
+  }
+  
+  .list-group-item-warning {
     background-color: #ffc107; /* Yellow for warning alerts */
     color: black;
-}
-
-/* Additional styling for interactive elements */
-.text-center {
+  }
+  
+  /* Additional styling for interactive elements */
+  .text-center {
     margin-top: 20px;
-}
-
-.border {
-     border: 1px solid #444; /* Dark gray border */
-}
-
-.rounded {
+  }
+  
+  .border {
+    border: 1px solid #444; /* Dark gray border */
+  }
+  
+  .rounded {
     border-radius: 0.25rem; /* Rounded corners */
-}
-
-/* Button styles */
-.btn-robot {
+  }
+  
+  /* Button styles */
+  .btn-robot {
     background-color: #007bff; /* Optimus blue for buttons */
     color: white;
     border-radius: 50px; /* Rounded button shape */
@@ -71,24 +77,24 @@ h2 {
     padding: 10px 20px; /* Add some padding for a better feel */
     font-size: 16px; /* Increase font size for better readability */
     cursor: pointer; /* Add a pointer cursor for a more interactive feel */
-}
-
-.btn-robot:hover {
+  }
+  
+  .btn-robot:hover {
     background-color: #0056b3; /* Darker blue on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
     transition: transform 0.2s; /* Smooth transition */
-}
-
-/* Card styles for robotic interface */
-.card {
+  }
+  
+  /* Card styles for robotic interface */
+  .card {
     border: none; /* No border for a cleaner look */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
     background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
-}
-
-/* Custom styles for circular display */
-.circular-display {
+  }
+  
+  /* Custom styles for circular display */
+  .circular-display {
     width: 200px;
     height: 200px;
     border-radius: 50%; /* Circular shape */
@@ -99,10 +105,37 @@ h2 {
     justify-content: center;
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-}
-
-/* Hover effect for the main display */
-.circular-display:hover {
+  }
+  
+  /* Hover effect for the main display */
+  .circular-display:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
     transition: transform 0.2s; /* Smooth transition */
-}
+  }
+  
+  /* Jarvis AI styles */
+  .jarvis-ai {
+    background-color: #181818; /* Dark background for a futuristic feel */
+    padding: 20px;
+    border: 1px solid #444; /* Dark gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  }
+  
+  .jarvis-ai .jarvis-header {
+    background-color: #007bff; /* Optimus blue for headings */
+    padding: 10px;
+    border-bottom: 1px solid #444; /* Dark gray border */
+    border-radius: 10px 10px 0 0; /* Rounded corners */
+  }
+  
+  .jarvis-ai .jarvis-body {
+    padding: 20px;
+  }
+  
+  .jarvis-ai .jarvis-footer {
+    background-color: #007bff; /* Optimus blue for headings */
+    padding: 10px;
+    border-top: 1px solid #444; /* Dark gray border */
+    border-radius: 0 0 10px 10px; /* Rounded corners */
+  }
