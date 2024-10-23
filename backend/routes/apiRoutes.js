@@ -1,11 +1,9 @@
 const express = require('express');
-const { activateSecurity, handleVoiceCommand } = require('../controllers/aiController');
+const { activateSecurity, handleVoiceCommand, chatbot } = require('../controllers/aiController');
 const router = express.Router();
 
-// Route to activate home security
 router.post('/activate-security', activateSecurity);
-
-// Route to handle voice commands
 router.post('/voice-command', handleVoiceCommand);
+router.post('/chatbot', chatbot);  // New chatbot route
 
 module.exports = router;
