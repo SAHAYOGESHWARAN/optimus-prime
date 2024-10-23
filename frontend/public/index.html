@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Optimus Prime AI Assistant</title>
+    <title>AI Assistant Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles.css"> <!-- Optional: Custom styles -->
+    <link rel="stylesheet" href="style.css"> <!-- Custom styles -->
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Optimus Prime</a>
+        <a class="navbar-brand" href="#">AI Assistant</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,40 +38,66 @@
     <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-md-3">
-                <!-- Left Side (Energy, CPU, etc.) -->
-                <h2>System Status</h2>
-                <p>Energy Level: <span id="energy-level">75%</span></p>
-                <p>CPU Usage: <span id="cpu-usage">60%</span></p>
-                <h4>Alerts</h4>
-                <ul id="alerts" class="list-group">
-                    <li class="list-group-item list-group-item-danger">Security Alert: Unauthorized access detected!</li>
-                    <li class="list-group-item list-group-item-warning">Battery Low: Charge recommended!</li>
-                </ul>
-                <button class="btn btn-robot mt-3">Activate Security</button>
-            </div>
-            <div class="col-md-6">
-                <!-- Center (Large Circular Display) -->
-                <h2>Main Display</h2>
-                <div class="text-center">
-                    <div style="width: 200px; height: 200px; border-radius: 50%; background: #007bff; color: white; display: flex; align-items: center; justify-content: center; margin: auto;">
-                        <h3>Core Status</h3>
+                <!-- System Information -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">System Information</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="circular-display">
+                            <p>CPU: <span id="cpu-usage">0:74</span></p>
+                        </div>
+                        <div class="circular-display">
+                            <p>RAM: <span id="ram-usage">15</span></p>
+                        </div>
+                        <div class="circular-display">
+                            <p>SWAP: <span id="swap-usage">49</span></p>
+                        </div>
+                        <div class="circular-display">
+                            <p>Disk Usage: <span id="disk-usage">2 G</span></p>
+                        </div>
+                        <h4>Alerts</h4>
+                        <ul id="alerts" class="list-group">
+                            <li class="list-group-item list-group-item-danger">Security Alert: Unauthorized access detected!</li>
+                            <li class="list-group-item list-group-item-warning">Battery Low: Charge recommended!</li>
+                        </ul>
+                        <button class="btn btn-robot mt-3">Activate Security</button>
                     </div>
                 </div>
-                <!-- Chatbot Interaction -->
-                <h4 class="mt-4">Chatbot Interaction</h4>
-                <div id="chatbot" class="border rounded p-3" style="min-height: 150px;">
-                    <p>Chatbot is online! Type your message...</p>
+            </div>
+            <div class="col-md-6">
+                <!-- Main Display -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">Saha Industries</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="circular-display" id="main-display">
+                            <h2 id="laichzeit">Laichzeit</h2>
+                            <p id="rammstein">Rammstein</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <!-- Right Side (News, Weather, etc.) -->
-                <h2>Updates</h2>
-                <p>News: New features coming soon!</p>
-                <p>Weather: Sunny, 25°C</p>
+                <!-- Chatbot -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">Chatbot</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="chatbot">
+                            <p id="chatbot-response">Hello, I'm JARVIS. How can I assist you today?</p>
+                            <input type="text" id="user-input" placeholder="Type your message..." class="form-control mb-2">
+                            <button class="btn-robot" id="send-button">Send</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
