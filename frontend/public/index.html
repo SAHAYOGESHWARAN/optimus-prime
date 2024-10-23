@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Optimus Prime AI Assistant</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css"> <!-- Optional: Custom styles -->
+</head>
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Left Side (Energy, CPU, etc.) -->
+                <h2>System Status</h2>
+                <p>Energy Level: 75%</p>
+                <p>CPU Usage: 60%</p>
+                <!-- Additional elements can go here -->
+            </div>
+            <div class="col-md-6">
+                <!-- Center (Large Circular Display) -->
+                <h2>Main Display</h2>
+                <div class="text-center">
+                    <div style="width: 200px; height: 200px; border-radius: 50%; background: #007bff; color: white; display: flex; align-items: center; justify-content: center; margin: auto;">
+                        <h3>Core Status</h3>
+                    </div>
+                </div>
+                <!-- Additional elements can go here -->
+            </div>
+            <div class="col-md-3">
+                <!-- Right Side (News, Weather, etc.) -->
+                <h2>Updates</h2>
+                <p>News: New features coming soon!</p>
+                <p>Weather: Sunny, 25°C</p>
+                <!-- Additional elements can go here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
