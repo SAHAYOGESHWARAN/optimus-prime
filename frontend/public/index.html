@@ -10,14 +10,43 @@
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="container-fluid">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Optimus Prime</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Chatbot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-md-3">
                 <!-- Left Side (Energy, CPU, etc.) -->
                 <h2>System Status</h2>
-                <p>Energy Level: 75%</p>
-                <p>CPU Usage: 60%</p>
-                <!-- Additional elements can go here -->
+                <p>Energy Level: <span id="energy-level">75%</span></p>
+                <p>CPU Usage: <span id="cpu-usage">60%</span></p>
+                <h4>Alerts</h4>
+                <ul id="alerts" class="list-group">
+                    <li class="list-group-item list-group-item-danger">Security Alert: Unauthorized access detected!</li>
+                    <li class="list-group-item list-group-item-warning">Battery Low: Charge recommended!</li>
+                </ul>
             </div>
             <div class="col-md-6">
                 <!-- Center (Large Circular Display) -->
@@ -28,6 +57,10 @@
                     </div>
                 </div>
                 <!-- Additional elements can go here -->
+                <h4>Chatbot Interaction</h4>
+                <div id="chatbot" class="border rounded p-3" style="min-height: 150px;">
+                    <p>Chatbot is online! Type your message...</p>
+                </div>
             </div>
             <div class="col-md-3">
                 <!-- Right Side (News, Weather, etc.) -->
@@ -38,7 +71,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
